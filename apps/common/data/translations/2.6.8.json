@@ -1,0 +1,26 @@
+[
+  {
+    "category": "domain_blacklist",
+    "message": "View domains blacklist"
+  },
+  {
+    "category": "domain_blacklist",
+    "message": "Domains blacklist"
+  },
+  {
+    "category": "domain_blacklist",
+    "message": "Domain"
+  },
+  {
+    "category": "domain_blacklist",
+    "message": "Blacklist domains allows you to blacklist emails that belongs to a certain domain\/subdomain."
+  },
+  {
+    "category": "domain_blacklist",
+    "message": "Import from CSV file"
+  },
+  {
+    "category": "domain_blacklist",
+    "message": "If unsure about how to format your file, do an export first and see how the file looks."
+  }
+]

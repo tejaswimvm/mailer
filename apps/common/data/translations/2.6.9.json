@@ -1,0 +1,10 @@
+[
+  {
+    "category": "campaigns",
+    "message": "Subject blacklisted words"
+  },
+  {
+    "category": "campaigns",
+    "message": "Body blacklisted words"
+  }
+]
