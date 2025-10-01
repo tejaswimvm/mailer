@@ -1,0 +1,30 @@
+<?php declare(strict_types=1);
+
+if (!defined('MW_PATH')) {
+    exit('No direct script access allowed');
+}
+
+
+use OpenApi\Annotations as OA;
+
+/**
+ * @OA\Schema(
+ *     schema="CampaignDeliveryLogResponseCollection",
+ *     type="object",
+ *     description="Campaign delivery log response collection",
+ *     title="Campaign delivery log response collection",
+ *     allOf={@OA\Schema(ref="#/components/schemas/ApiResponse")}
+ *  )
+ */
+final class CampaignDeliveryLogResponseCollection extends ApiResponse
+{
+    /**
+     * @OA\Property(
+     *     description="Api response data",
+     *     title="Response data"
+     * )
+     *
+     * @var CampaignUnsubscribeResponseDataCollection
+     */
+    public $data;
+}
