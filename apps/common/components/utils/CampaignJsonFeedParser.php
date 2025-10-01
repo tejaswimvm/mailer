@@ -74,7 +74,7 @@ class CampaignJsonFeedParser
             return $content;
         }
 
-        if (!isset($multiMatches[0], $multiMatches[0][0])) {
+        if (!isset($multiMatches[0], $multiMatches[0][0])) { // @phpstan-ignore-line
             return $content;
         }
 
@@ -91,7 +91,7 @@ class CampaignJsonFeedParser
                 continue;
             }
 
-            if (!isset($matches[1], $matches[5])) {
+            if (!isset($matches[1], $matches[5])) { // @phpstan-ignore-line
                 continue;
             }
 
@@ -116,7 +116,7 @@ class CampaignJsonFeedParser
                 continue;
             }
 
-            if (!isset($matches[1], $matches[5])) {
+            if (!isset($matches[1], $matches[5])) { // @phpstan-ignore-line
                 continue;
             }
 
@@ -135,7 +135,7 @@ class CampaignJsonFeedParser
 
             $attributes = [];
             foreach ($matches as $match) {
-                if (!isset($match[1], $match[3])) {
+                if (!isset($match[1], $match[3])) { // @phpstan-ignore-line
                     continue;
                 }
                 $attributes[strtolower((string)$match[1])] = $match[3];

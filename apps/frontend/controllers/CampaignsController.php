@@ -212,7 +212,7 @@ class CampaignsController extends Controller
         //
 
         // 1.4.5
-        $emailContent = hooks()->applyFilters('frontend_campaigns_controller_web_version_action_email_content', $emailContent, $list, $customer, $template, $campaign, $subscriber, $server);
+        $emailContent = (string) hooks()->applyFilters('frontend_campaigns_controller_web_version_action_email_content', $emailContent, $list, $customer, $template, $campaign, $subscriber, $server);
 
         // since 2.6.4
         $emailContent = CampaignHelper::removeDisableTrackingAttr($emailContent);

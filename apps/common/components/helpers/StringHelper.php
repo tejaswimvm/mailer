@@ -154,6 +154,7 @@ class StringHelper
         $params = [];
         $tag = trim(html_decode($tag));
         if (preg_match_all('/([a-z0-9]+)=(\'|")([a-z0-9\s:\-_\/\\\]+)(\'|")/i', $tag, $matches)) {
+            // @phpstan-ignore-next-line
             if (isset($matches[1], $matches[3]) && (is_countable($matches[1]) ? count($matches[1]) : 0) === (is_countable($matches[3]) ? count($matches[3]) : 0)) {
                 for ($i = 0; $i < (is_countable($matches[1]) ? count($matches[1]) : 0); $i++) {
                     $params[$matches[1][$i]] = $matches[3][$i];

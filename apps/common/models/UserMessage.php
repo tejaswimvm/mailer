@@ -166,7 +166,7 @@ class UserMessage extends ActiveRecord
             return t('messages', $this->title, $this->title_translation_params);
         }
 
-        return (string)$this->title;
+        return t('messages', (string)$this->title);
     }
 
     /**
@@ -178,7 +178,7 @@ class UserMessage extends ActiveRecord
             return t('messages', $this->message, $this->message_translation_params);
         }
 
-        return (string)$this->message;
+        return t('messages', (string)$this->message);
     }
 
     /**

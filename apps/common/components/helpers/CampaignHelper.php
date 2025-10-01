@@ -390,7 +390,7 @@ class CampaignHelper
             }
 
             if (!$isPlainText) {
-                $urls = $matches[self::MATCH_HREFS_REGEX_URL_INDEX];
+                $urls = $matches[self::MATCH_HREFS_REGEX_URL_INDEX]; // @phpstan-ignore-line
                 $urls = array_map('trim', $urls);
                 $urls = (array)array_combine($urls, $matches[self::MATCH_HREFS_REGEX_MARKUP_INDEX]);
             } else {
@@ -1070,7 +1070,7 @@ class CampaignHelper
         $randomContentBlock = [];
         if (strpos($content, '[RANDOM_CONTENT') !== false && preg_match_all('/\[RANDOM_CONTENT:([^\]]+)\]/', $content, $matches)) {
             foreach ($matches[0] as $index => $tag) {
-                if (!isset($matches[1]) || !isset($matches[1][$index])) {
+                if (!isset($matches[1]) || !isset($matches[1][$index])) { // @phpstan-ignore-line
                     continue;
                 }
                 $tagValue = explode('|', $matches[1][$index]);
@@ -1377,7 +1377,7 @@ class CampaignHelper
         // 1.8.1
         if (!empty($subscriber) && self::getIsTagUsedInCampaign('SURVEY', $campaign, $content)) {
             if (preg_match_all('/\[SURVEY:([a-z0-9]{13}):VIEW_URL\]/i', $content, $surveyMatches)) {
-                if (isset($surveyMatches[0], $surveyMatches[1])) {
+                if (isset($surveyMatches[0], $surveyMatches[1])) { // @phpstan-ignore-line
                     foreach ($surveyMatches[0] as $index => $surveyMatch) {
                         $surveyUid = $surveyMatches[1][$index];
                         if (!empty($subscriber->subscriber_uid) && !empty($campaign->campaign_uid)) {
@@ -1791,11 +1791,11 @@ class CampaignHelper
 
             if ($count === 0) {
                 if ($incrementOnce) {
-                    $fieldValue = (int)$valueModel->value + (int)$matches[1];
+                    $fieldValue = (int)$valueModel->value + (int)$matches[1]; // @phpstan-ignore-line
                 } elseif ($decrementOnce) {
-                    $fieldValue = (int)$valueModel->value - (int)$matches[1];
+                    $fieldValue = (int)$valueModel->value - (int)$matches[1]; // @phpstan-ignore-line
                 } elseif ($multiplyOnce) {
-                    $fieldValue = (int)$valueModel->value * (int)$matches[1];
+                    $fieldValue = (int)$valueModel->value * (int)$matches[1]; // @phpstan-ignore-line
                 }
             }
         }
@@ -1973,7 +1973,7 @@ class CampaignHelper
             return $content;
         }
 
-        if (!isset($multiMatches[0], $multiMatches[0][0])) {
+        if (!isset($multiMatches[0], $multiMatches[0][0])) { // @phpstan-ignore-line
             return $content;
         }
 
@@ -2019,7 +2019,7 @@ class CampaignHelper
 
                 $attributes = [];
                 foreach ($matches as $match) {
-                    if (!isset($match[1], $match[3])) {
+                    if (!isset($match[1], $match[3])) { // @phpstan-ignore-line
                         continue;
                     }
                     $attributes[strtolower((string)$match[1])] = $match[3];
@@ -2075,7 +2075,7 @@ class CampaignHelper
             return $content;
         }
 
-        if (!isset($multiMatches[0], $multiMatches[0][0])) {
+        if (!isset($multiMatches[0], $multiMatches[0][0])) { // @phpstan-ignore-line
             return $content;
         }
 
@@ -2100,7 +2100,7 @@ class CampaignHelper
 
             $attributes = [];
             foreach ($matches as $match) {
-                if (!isset($match[1], $match[3])) {
+                if (!isset($match[1], $match[3])) { // @phpstan-ignore-line
                     continue;
                 }
                 $attributes[strtolower((string)$match[1])] = $match[3];
@@ -2137,7 +2137,7 @@ class CampaignHelper
     {
         if (strpos($content, '[RANDOM_CONTENT') !== false && preg_match_all('/\[RANDOM_CONTENT:([^\]]+)\]/', $content, $matches)) {
             foreach ($matches[0] as $index => $tag) {
-                if (!isset($matches[1]) || !isset($matches[1][$index])) {
+                if (!isset($matches[1]) || !isset($matches[1][$index])) { // @phpstan-ignore-line
                     continue;
                 }
                 $tagValue = explode('|', $matches[1][$index]);

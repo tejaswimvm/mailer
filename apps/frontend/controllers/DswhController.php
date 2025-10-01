@@ -854,7 +854,6 @@ class DswhController extends Controller
                 $bounceLog->bounce_type   = $bounceType;
                 $bounceLog->save();
 
-                // @phpstan-ignore-next-line
                 if ($bounceLog->bounce_type == CampaignBounceLog::BOUNCE_HARD) {
                     $subscriber->addToBlacklist($bounceLog->message);
                 }

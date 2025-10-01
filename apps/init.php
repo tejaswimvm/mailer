@@ -39,7 +39,7 @@ if (defined('MW_FORCE_DEBUG_MODE') && MW_FORCE_DEBUG_MODE) {
 
 // a few base mw constants
 define('MW_NAME', 'MailWizz EMA');
-define('MW_VERSION', '2.6.9'); // never remove or alter this constant, never!
+define('MW_VERSION', '2.7.2'); // never remove or alter this constant, never!
 define('MW_PATH', realpath(dirname(__FILE__).'/..'));
 define('MW_ROOT_PATH', MW_PATH);
 define('MW_APPS_PATH', MW_PATH.'/apps');

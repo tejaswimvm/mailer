@@ -460,7 +460,11 @@ class DailyCommand extends ConsoleCommand
     protected function deleteCustomerOldActionLogs(): self
     {
         try {
-            db()->createCommand('DELETE FROM `{{customer_action_log}}` WHERE date_added < DATE_SUB(NOW(), INTERVAL 1 MONTH)')->execute();
+            $retentionDays = (int) hooks()->applyFilters('customer_action_logs_retention_days', 30);
+            db()->createCommand(sprintf(
+                'DELETE FROM `{{customer_action_log}}` WHERE date_added < DATE_SUB(NOW(), INTERVAL %d DAY)',
+                $retentionDays
+            ))->execute();
         } catch (Exception $e) {
             $this->stdout(__LINE__ . ': ' . $e->getMessage());
             Yii::log($e->getMessage(), CLogger::LEVEL_ERROR);
@@ -1158,6 +1162,11 @@ class DailyCommand extends ConsoleCommand
         })->all();
 
         foreach ($userIds as $userId) {
+            $allow = (bool) hooks()->applyFilters('console_command_daily_allow_send_unread_messages_reminder_to_user', true, $userId);
+            if (!$allow) {
+                continue;
+            }
+
             /** @var User $user */
             $user = User::model()->findByPk($userId);
 
@@ -1253,6 +1262,11 @@ class DailyCommand extends ConsoleCommand
         $timeAgo = new \Carbon\Carbon('-1 year');
 
         foreach ($customerIds as $customerId) {
+            $allow = (bool) hooks()->applyFilters('console_command_daily_allow_send_unread_messages_reminder_to_customer', true, $customerId);
+            if (!$allow) {
+                continue;
+            }
+
             /** @var Customer|null $customer */
             $customer = Customer::model()->findByPk($customerId);
 

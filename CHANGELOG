@@ -1,4 +1,25 @@
 --- -------------------------------------------
+--- Version 2.7.2 - 2025-09-15
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.7.1 - 2025-08-11
+--- -------------------------------------------
+[ADD] - Added console_command_daily_allow_send_unread_messages_reminder_to_user filter hook
+[ADD] - Added console_command_daily_allow_send_unread_messages_reminder_to_customer filter hook
+[ADD] - Added customer_action_logs_retention_days action filter
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.7.0 - 2025-07-13
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
 --- Version 2.6.9 - 2025-06-11
 --- -------------------------------------------
 [ENH] - The [XML_FEED_ITEM_CREATOR] was added to read the dc:creator property in the feed item 

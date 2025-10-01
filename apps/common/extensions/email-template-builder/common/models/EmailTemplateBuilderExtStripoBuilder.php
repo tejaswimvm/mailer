@@ -181,7 +181,7 @@ class EmailTemplateBuilderExtStripoBuilder extends EmailTemplateBuilder
             'css'                     => $css,
             'locale'                  => $locale,
             'apiRequestData'          => [
-                'emailId' => $user->getUid(),
+                'emailId' => $user ? $user->getUid() : '',
             ],
             'userFullName'            => $user ? $user->getFullName() : '',
             'codeEditorButtonId'      => 'btn_' . $builderId . '_content',

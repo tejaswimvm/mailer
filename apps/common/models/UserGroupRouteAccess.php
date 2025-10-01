@@ -365,9 +365,9 @@ class UserGroupRouteAccess extends ActiveRecord
         }
         if (empty($info['name'])) {
             if ($reflObj instanceof ReflectionMethod) {
-                $info['name'] = ucfirst(str_replace('_', ' ', substr(strtolower((string)$reflObj->name), 6)));
+                $info['name'] = ucfirst(str_replace('_', ' ', (string) substr(strtolower((string)$reflObj->name), 6)));
             } elseif ($reflObj instanceof ReflectionClass) {
-                $info['name'] = ucfirst(str_replace('_', ' ', substr(strtolower((string)$reflObj->name), 0, -10)));
+                $info['name'] = ucfirst(str_replace('_', ' ', (string) substr(strtolower((string)$reflObj->name), 0, -10)));
             }
         }
         $info['name'] = (string)str_replace('Ext ', 'Extension ', (string)$info['name']);

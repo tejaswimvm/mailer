@@ -419,7 +419,7 @@ class ContentBuilderExtInnovaStudioBuilder extends ContentBuilder
         $snippetConfigTemplateSrc = FileSystemHelper::getFileContents($this->getSrcAssetsPath('contentbuilder/assets/minimalist-blocks') . '/content.js');
 
         $content = preg_replace_callback("/<img[^>]*?src *= *[\"']?([^\"']*)/i", function ($matches) use ($assetsUrl) {
-            if (isset($matches[1])) {
+            if (isset($matches[1])) { // @phpstan-ignore-line
                 return '<img src="' . $assetsUrl . '/contentbuilder/' . $matches[1];
             }
         }, $snippetConfigTemplateSrc);
@@ -427,7 +427,7 @@ class ContentBuilderExtInnovaStudioBuilder extends ContentBuilder
         $content = preg_replace_callback(
             "/<source[^>]*?src *= *[\"']?([^\"']*)/i",
             function ($matches) use ($assetsUrl) {
-                if (isset($matches[1])) {
+                if (isset($matches[1])) { // @phpstan-ignore-line
                     return '<source src="' . $assetsUrl . '/contentbuilder/' . $matches[1];
                 }
             },

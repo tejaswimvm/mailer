@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea
+class ComposerStaticInitaadb0cb7a27ebf6fbb83a889af183d69
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -71,17 +71,6 @@ class ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea
         array (
             'Zxing\\' => 6,
             'ZeroBounce\\' => 11,
-            'Zend\\Validator\\' => 15,
-            'Zend\\Uri\\' => 9,
-            'Zend\\Stdlib\\' => 12,
-            'Zend\\ServiceManager\\' => 20,
-            'Zend\\Mime\\' => 10,
-            'Zend\\Math\\' => 10,
-            'Zend\\Mail\\' => 10,
-            'Zend\\Loader\\' => 12,
-            'Zend\\Http\\' => 10,
-            'Zend\\Escaper\\' => 13,
-            'Zend\\Crypt\\' => 11,
         ),
         'W' => 
         array (
@@ -235,7 +224,6 @@ class ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea
         ),
         'D' => 
         array (
-            'Dyn\\' => 4,
             'Dompdf\\' => 7,
             'Doctrine\\Inflector\\' => 19,
             'Doctrine\\Deprecations\\' => 22,
@@ -297,50 +285,6 @@ class ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea
         'ZeroBounce\\' => 
         array (
             0 => __DIR__ . '/..' . '/twisted1919/zerobounce/src',
-        ),
-        'Zend\\Validator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-validator/src',
-        ),
-        'Zend\\Uri\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-uri/src',
-        ),
-        'Zend\\Stdlib\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
-        ),
-        'Zend\\ServiceManager\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-servicemanager/src',
-        ),
-        'Zend\\Mime\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-mime/src',
-        ),
-        'Zend\\Math\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-math/src',
-        ),
-        'Zend\\Mail\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-mail/src',
-        ),
-        'Zend\\Loader\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-loader/src',
-        ),
-        'Zend\\Http\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-http/src',
-        ),
-        'Zend\\Escaper\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-escaper/src',
-        ),
-        'Zend\\Crypt\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-crypt/src',
         ),
         'WhichBrowser\\' => 
         array (
@@ -752,17 +696,13 @@ class ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
         ),
-        'Dyn\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dyninc/dyn-php/src',
-        ),
         'Dompdf\\' => 
         array (
             0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
         'Doctrine\\Inflector\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
+            0 => __DIR__ . '/..' . '/doctrine/inflector/src',
         ),
         'Doctrine\\Deprecations\\' => 
         array (
@@ -1016,10 +956,10 @@ class ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit826046ba32c1d9f5841f26a31c0489ea::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitaadb0cb7a27ebf6fbb83a889af183d69::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitaadb0cb7a27ebf6fbb83a889af183d69::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitaadb0cb7a27ebf6fbb83a889af183d69::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitaadb0cb7a27ebf6fbb83a889af183d69::$classMap;
 
         }, null, ClassLoader::class);
     }
